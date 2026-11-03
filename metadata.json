@@ -1,0 +1,6 @@
+{
+  "name": "Lịch 2027 - Em Yêu Biển Đảo Quê Hương",
+  "description": "Lịch năm 2027 chủ đề Em Yêu Biển Đảo Quê Hương dành cho học sinh và giáo viên THCS. Tích hợp lịch âm dương Đinh Mùi, kế hoạch dạy học, bản đồ chủ quyền, hoạt động ngoại khóa và góc trắc nghiệm kiến thức.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
