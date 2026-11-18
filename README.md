@@ -1,20 +1,34 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# TEEN YÊU BIỂN ĐẢO - LỊCH 2027 (Kế hoạch L27)
 
-# Run and deploy your AI Studio app
+Ứng dụng web tương tác niên lịch 2027 kết hợp giáo dục chủ quyền biển đảo Việt Nam dành cho học sinh và giáo viên THCS.
 
-This contains everything you need to run your app locally.
+## Tính năng nổi bật
 
-View your app in AI Studio: https://ai.studio/apps/37fa105f-0150-4e34-b00a-819d530b5b98
+- **Lịch Tháng & Năm (2026–2027)**: Song hành Dương lịch và Âm lịch (Bính Ngọ – Đinh Mùi), ngày Hoàng Đạo, các ngày lễ lớn và sự kiện lịch sử biển đảo Việt Nam.
+- **Ghi chú cá nhân & Kế hoạch dạy học**: Tạo, phân loại (`Soạn giáo án`, `Hoạt động Đội/Đoàn`, `Kiểm tra`, `Sự kiện ngoại khóa`) và lưu tự động trên `localStorage`.
+- **Hải Trình Biển Đảo (Bản đồ tương tác)**: 15 tọa độ đảo tiền tiêu, quần đảo Hoàng Sa, Trường Sa, Nhà giàn DK1.
+- **EduHub & Đố Vui Biển Đảo**: Chuyên đề dạy học liên môn, thử thách hành động xanh, trắc nghiệm cấp Chứng nhận Danh dự và tính năng viết thư gửi chiến sĩ hải quân.
+- **In Lịch Bàn A4 & Âm thanh sóng biển**: Hỗ trợ in từng trang lịch theo tháng và âm thanh sóng biển tổng hợp qua Web Audio API.
 
-## Run Locally
+## Cài đặt & chạy cục bộ
 
-**Prerequisites:**  Node.js
+```bash
+npm install
+npm run dev
+```
 
+## Kiểm tra kiểu & đóng gói production
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+npm run lint
+npm run build
+npm run preview
+```
+
+## Triển khai lên GitHub Pages
+
+Repository đã cấu hình sẵn workflow tại `.github/workflows/deploy.yml` và đường dẫn tương đối (`base: './'`) trong `vite.config.ts`:
+
+1. Đẩy mã nguồn lên nhánh `main` trên GitHub.
+2. Vào **Settings → Pages** của repository, ở mục **Build and deployment → Source** chọn **GitHub Actions**.
+3. Workflow sẽ tự động chạy `npm run lint`, `npm run build` và xuất bản thư mục `dist/` lên GitHub Pages.
